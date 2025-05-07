@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footer-height: 150px;
+  /* --footer-padding: 5px; */
+  --dialog-width: 250px;
+  --dialog-height: 100px;
+  --border-color: #555;
+  --main-text-style: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+canvas {
+  background-color: green;
+}
+
+footer {
+  background-color: lightgreen;
+  flex-basis: var(--footer-height);
+}
+
+/* BOITES DE DIALOGUE */
+dialog {
+  padding: 2%;
+  min-height: var(--dialog-height);
+  width: var(--dialog-width);
+  position: absolute;
+  top: calc(50% - var(--dialog-height));
+  left: calc(50% - var(--dialog-width) / 2);
+  background-color: lightgreen;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(50, 20, 50, 0.5);
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-dialog {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  font-family: var(--main-text-style);
+}
+.select-dialog {
+  width: 75px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  font-size: 1em;
+  color: var(--border-color);
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+
+.dialog-text {
+  font-family: var(--main-text-style);
+}
+
+.btn-dialog {
+  width: 105px;
+  min-height: 30px;
+  border-radius: 5px;
+  background-color: lightgreen;
+  font-family: var(--main-text-style);
+}
+
+.flex {
+  display: flex;
+}
+
+.f-center {
+  justify-content: center;
+}
+
+.f-space-b {
+  justify-content: space-between;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+/* Test */
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer section {
+  background-color: darkgreen;
+  margin: 8px 4px;
+  border-radius: 12px;
+  padding: 5px;
+  border-top: 4px solid black;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid black;
+}
+
+.control-left {
+  flex-grow: 2;
+}
+
+.control-middle {
+  flex-grow: 1;
+}
+
+.control-right {
+  flex-grow: 2;
+}
+
+#messagebox {
+  background-color: beige;
+  max-width: 50%;
+  height: 9em;
+  overflow-y: scroll;
+  font-size: 0.75em;
+  font-family: var(--main-text-style);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapis vert</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <dialog id="new_game">
+        <p class="header-dialog m-5">Nouvelle partie</p>
+        <select name="player_count" class="select-dialog m-5" id="player_count">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+        </select>
+        <span class="dialog-text">Joueurs</span>
+        <div class="flex f-center m-5 "><button class="btn-dialog">OK</button></div>
+    </dialog>
+    <dialog id="new_hand">
+        <p class="header-dialog m-5">Nouvelle main</p>
+        <div class="flex f-center m-5 "><button class="btn-dialog">OK</button></div>
+    </dialog>
+
+    <dialog id="preflop">
+        <p class="header-dialog m-5">Préflop</p>
+        <div class="flex f-center m-5 "><button class="btn-dialog">OK</button></div>
+    </dialog>
+
+    <dialog id="flop">
+        <p class="header-dialog m-5">Flop</p>
+        <div class="flex f-center m-5 "><button class="btn-dialog">OK</button></div>
+    </dialog>
+
+    <dialog id="showdown">
+        <p class="header-dialog m-5">Abattage</p>
+        <div class="flex f-center m-5 "><button class="btn-dialog">OK</button></div>
+    </dialog>
+
+    <dialog id="end_hand">
+        <p class="header-dialog m-5">Fin de la main</p>
+        <div class="flex f-space-b m-5 ">
+            <button id="btn-hand" class="btn-dialog">Nouvelle main</button>
+            <button id="btn-game" class="btn-dialog">Fin de partie</button>
+        </div>
+    </dialog>
+
+    <dialog id="end_game">
+        <p class="header-dialog m-5">Fin de partie</p>
+        <div class="flex f-center m-5 ">
+            <button class="btn-dialog">Nouvelle partie</button>
+        </div>
+    </dialog>
+
+    <canvas>Votre navigateur ne prend pas en charge l'élément Canvas.</canvas>
+    <footer>
+        <section class=" control-left">
+            <div id="messagebox"></div>
+        </section>
+        <section class=" ontrol-middle">Partie du contrôle milieu</section>
+        <section class="control-right">Partie du contrôle droite</section>
+    </footer>
+</body>
+<script type="module" src="./index.js"></script>
+
+</html>
