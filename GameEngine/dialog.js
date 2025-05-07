@@ -2,18 +2,19 @@ import { Controls } from "./controls.js";
 
 export const Dialog = () => {
   /* ***** FENETRES DE DIALOGUE ***** */
-
-  // Dialogue Nouvelle partie.
-  const newGame = document.querySelector("#new_game");
-  const btnCloseNewGame = document.querySelector("#new_game button");
-  const selPlayerCount = document.querySelector("#player_count");
   const controls = Controls();
   let playerCount;
 
+  // Dialogue Nouvelle partie
+  const newGame = document.querySelector("#new_game");
+  const btnCloseNewGame = document.querySelector("#new_game button");
+  const selPlayerCount = document.querySelector("#player_count");
+
   function newGameOpen() {
-    newGame.show();
+    newGame.showModal();
     console.log("New Game");
   }
+
   function newGameClose() {
     newGame.close();
     controls.addMessage("Nouvelle partie");
@@ -23,16 +24,12 @@ export const Dialog = () => {
   btnCloseNewGame.addEventListener("click", function () {
     playerCount = selPlayerCount.value;
     console.log(playerCount + " joueurs");
-    console.log("fermeture de la fenêtre New Game");
-    newGameClose().then((value) => {
+    newGameClose().then(() => {
       newHandOpen();
     });
   });
-  newGame.addEventListener("close", function () {
-    // console.log("fermeture de la fenêtre New Game");
-  });
 
-  // Dialogue Novelle main
+  // Dialogue Nouvelle main
   const newHand = document.querySelector("#new_hand");
   const btnCloseNewHand = document.querySelector("#new_hand button");
 
@@ -40,6 +37,7 @@ export const Dialog = () => {
     newHand.show();
     console.log("Nouvelle main");
   }
+
   function newHandClose() {
     controls.addMessage("Nouvelle main");
     newHand.close();
@@ -48,12 +46,9 @@ export const Dialog = () => {
 
   btnCloseNewHand.addEventListener("click", function () {
     console.log("Fermeture de la fenêtre New Hand");
-    newHandClose().then((value) => {
+    newHandClose().then(() => {
       preflopOpen();
     });
-  });
-  newHand.addEventListener("close", function () {
-    // console.log("Fermeture de la fenêtre New Hand");
   });
 
   // Dialogue Pré-flop
@@ -64,6 +59,7 @@ export const Dialog = () => {
     preflop.show();
     console.log("Préflop");
   }
+
   function preflopClose() {
     preflop.close();
     controls.addMessage("Préflop");
@@ -72,12 +68,9 @@ export const Dialog = () => {
 
   btnClosePreflop.addEventListener("click", function () {
     console.log("Fermeture de la fenêtre Préflop");
-    preflopClose().then((value) => {
+    preflopClose().then(() => {
       flopOpen();
     });
-  });
-  preflop.addEventListener("close", function () {
-    // console.log("Fermeture de la fenêtre Préflop");
   });
 
   // Dialogue Flop
@@ -88,6 +81,7 @@ export const Dialog = () => {
     flop.show();
     console.log("Le Flop");
   }
+
   function flopClose() {
     flop.close();
     controls.addMessage("Le Flop");
@@ -96,15 +90,12 @@ export const Dialog = () => {
 
   btnCloseFlop.addEventListener("click", function () {
     console.log("Fermeture de la fenêtre Flop");
-    flopClose().then((value) => {
+    flopClose().then(() => {
       showdownOpen();
     });
   });
-  preflop.addEventListener("close", function () {
-    // console.log("Fermeture de la fenêtre Flop");
-  });
 
-  // Dialogue Abattage.
+  // Dialogue Abattage
   const showdown = document.querySelector("#showdown");
   const btnCloseShowdown = document.querySelector("#showdown button");
 
@@ -112,6 +103,7 @@ export const Dialog = () => {
     showdown.show();
     console.log("L'Abattage");
   }
+
   function showdownClose() {
     showdown.close();
     controls.addMessage("Abattage");
@@ -120,12 +112,9 @@ export const Dialog = () => {
 
   btnCloseShowdown.addEventListener("click", function () {
     console.log("Fermeture de la fenêtre d'abattage");
-    showdownClose().then((value) => {
+    showdownClose().then(() => {
       endHandOpen();
     });
-  });
-  preflop.addEventListener("close", function () {
-    // console.log("Fermeture de la fenêtre Flop");
   });
 
   // Dialogue Fin de main
@@ -144,22 +133,17 @@ export const Dialog = () => {
   }
 
   btnCloseEndHandNew.addEventListener("click", function () {
-    endHandClose().then((value) => {
+    endHandClose().then(() => {
       controls.addMessage("Fin de main");
       newHandOpen();
     });
   });
 
   btnCloseEndGameNew.addEventListener("click", function () {
-    endHandClose().then((value) => {
+    endHandClose().then(() => {
       controls.addMessage("Fin de partie");
       endGameOpen();
-      console.log("Fin de partie.");
     });
-  });
-
-  endHand.addEventListener("close", function () {
-    // console.log("Fin de main");
   });
 
   // Dialogue Fin de partie
@@ -168,29 +152,23 @@ export const Dialog = () => {
 
   function endGameOpen() {
     endGame.show();
-    // console.log("Fin de partie");
+    console.log("Fin de partie");
   }
+
   function endGameClose() {
     endGame.close();
-    // controls.addMessage("Fin de partie.");
+    controls.addMessage("Fin de partie.");
     return Promise.resolve(true);
   }
 
   btnCloseEndGame.addEventListener("click", function () {
-    endGameClose().then((value) => {
+    endGameClose().then(() => {
       newGameOpen();
     });
   });
-  endHand.addEventListener("close", function () {
-    // console.log("Fin de main");
-  });
 
   return {
-    newGameOpen: function () {
-      newGame.showModal();
-      console.log("Nouvelle partie");
-    },
-
+    newGameOpen: newGameOpen,
     getPlayerCount: function () {
       return playerCount;
     },

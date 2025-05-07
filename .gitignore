@@ -4,3 +4,5 @@
 *.log
 # Dossiers de dépendances (si tu en as)
 node_modules/
+# Autres
+trash/
