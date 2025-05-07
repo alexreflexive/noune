@@ -1,0 +1,6 @@
+# Fichiers VSCode
+.vscode/
+# Fichiers temporaires
+*.log
+# Dossiers de dépendances (si tu en as)
+node_modules/
