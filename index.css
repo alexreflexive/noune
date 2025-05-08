@@ -120,6 +120,14 @@ footer section {
   flex-direction: row;
 }
 
+.btn:hover{
+  background-color: lightgray;
+}
+
+.btn:active{
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .betControl{
   flex-shrink: 0; /* Ne rétrécit pas */
   flex-grow: 0; /* Ne grandit pas */
@@ -140,7 +148,8 @@ footer section {
 .ctrl-btn {
   height: 75px;
   width: 75px; 
-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
 }
 
 .bet{
