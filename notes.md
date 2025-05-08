@@ -1,5 +1,7 @@
 # INFOS
-Cette version qu'on appelle None (pour Jeu de la Noune) est à son départ une copie du dossier tapisvert.
+Cette version qu'on appelle Noune (pour Jeu de la Noune) est à son départ une copie du dossier tapisvert.
+Dépôt GitHub : https://github.com/alexreflexive/noune.git
+
 
 # TODO
 
