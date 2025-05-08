@@ -38,8 +38,8 @@ function playerBox(context, player) {
   // Charge l'image en fonction du genre
   const img = new Image();
   img.src = "/assets/female.png"; // Par défaut, utilise female.png
-  if (player.gender === "male.png") {
-    img.src = "/assets/female.png"; // Pas d'avatar mâle pour l'instant
+  if (player.gender === "male") {
+    img.src = "/assets/male.png"; // Pas d'avatar mâle pour l'instant
   }
 
   // Dessine l'image alignée à gauche du rectangle

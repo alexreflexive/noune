@@ -58,11 +58,25 @@
 
     <canvas>Votre navigateur ne prend pas en charge l'élément Canvas.</canvas>
     <footer>
-        <section class=" control-left">
+        <section class="control-left">
             <div id="messagebox"></div>
         </section>
-        <section class=" ontrol-middle">Partie du contrôle milieu</section>
-        <section class="control-right">Partie du contrôle droite</section>
+        <section class="control-middle">Partie du contrôle milieu</section>
+        <section class="control-right ">
+            <div class="betControl">
+                <div>
+                    <button class="ctrl-btn">Fold</button>
+                    <button class="ctrl-btn">Call</button>
+                    <button class="ctrl-btn">Raise</button>
+                </div>
+                <div>
+                    <button class="betMinMax">Min</button><input type="range" min="0" max="100" value="50" step="1"><button class="betMinMax">Max</button>
+                </div>
+            </div>
+            <div class="betDisplay">
+                <div class="bet">10</div>
+            </div>
+        </section>
     </footer>
 </body>
 <script type="module" src="./index.js"></script>
