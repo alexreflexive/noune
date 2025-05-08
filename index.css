@@ -120,6 +120,10 @@ footer section {
   flex-direction: row;
 }
 
+.btn{
+  text-align: center;
+}
+
 .btn:hover{
   background-color: lightgray;
 }
@@ -128,6 +132,12 @@ footer section {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.btn:disabled{
+  color: gray;
+  transform: scale(1);
+}
+
 .betControl{
   flex-shrink: 0; /* Ne rétrécit pas */
   flex-grow: 0; /* Ne grandit pas */

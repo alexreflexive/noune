@@ -64,19 +64,19 @@
         <section class="control-middle">Partie du contrôle milieu</section>
         <section class="control-right ">
             <div class="betControl">
-                <div>
+                <div style="text-align: center;">
                     <button id="ctrl-btn-1" class="btn ctrl-btn">Fold</button>
-                    <button id="ctrl-btn-2" class="btn ctrl-btn">Call</button>
-                    <button id="ctrl-btn-3" class="btn ctrl-btn">Raise</button>
+                    <button id="ctrl-btn-2" class="btn ctrl-btn">Check</button>
+                    <button id="ctrl-btn-3" class="btn ctrl-btn">Bet</button>
                 </div>
                 <div>
                     <button id="btn-min" class="btn betMinMax">Min</button>
-                    <input type="range" min="0" max="100" value="50" step="1">
+                    <input id="bet-range" type="range" min="1" max="100" value="10" step="1">
                     <button id="btn-max" class="btn betMinMax">Max</button>
                 </div>
             </div>
             <div class="betDisplay">
-                <div class="bet">10</div>
+                <div id="bet-value" class="bet">10</div>
             </div>
         </section>
     </footer>

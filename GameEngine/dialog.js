@@ -1,8 +1,9 @@
-import { Controls } from "./controls.js";
+//import { Controls } from "./controls.js";
 
-export const Dialog = () => {
+export const Dialog = (controls) => {
   /* ***** FENETRES DE DIALOGUE ***** */
-  const controls = Controls();
+  //const controls = c;
+
   let playerCount;
 
   // Dialogue Nouvelle partie

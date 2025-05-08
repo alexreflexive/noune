@@ -6,6 +6,9 @@ import { playerBoxes } from "./GameEngine/player_boxes.js";
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 const controls = Controls();
+controls.setStatus(0); // Initialisation de l'état des contrôles
+//controls.setControls(); // Initialisation des contrôles
+
 const board = {
   sidepots: [],
   flopCard: {},
@@ -14,7 +17,7 @@ const board = {
   width: 400,
   height: 200,
 };
-const dialog = Dialog();
+const dialog = Dialog(controls);
 const FOOTER_HEIGHT = 150;
 // const BOARD_WIDTH = 400;
 // const BOARD_HEIGHT = 200;
