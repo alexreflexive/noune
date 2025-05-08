@@ -34,6 +34,8 @@ export const Players = (playerCount) => {
         y: 0,
         stack: 100,
         bet: 10,
+        cardState:"open", // Ouvert par défaut
+        cardValue : "A♠", // Valeur de la carte (0 pour aucune carte)        
       });
 
       // playerCount--; // Parce que le héros est le premier de playerCount.
@@ -47,6 +49,8 @@ export const Players = (playerCount) => {
         player.bet = 10;
         player.type = "CPU";
         playersReturn.push(player);
+        player.cardState="closed-active"; // Ouvert par défaut
+        player.cardValue = "A♠"; // Valeur de la carte (0 pour aucune carte)
       }
       return playersReturn;
     },
